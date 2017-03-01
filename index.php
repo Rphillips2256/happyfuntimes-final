@@ -20,6 +20,7 @@
 				<li><a href="/SRS">SRS</a></li>
 				<li><a href="/SoftwareDesign">Software Design</a></li>
 				<li><a href="/TestPlan">Test Plan</a></li>
+				<li><a href="/GameLife">The Game</a></li>
 				
 				</ul>
 			</td>

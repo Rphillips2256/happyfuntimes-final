@@ -1,41 +1,37 @@
-l<h2 id="PrincipleObjects">Principle Objects</h2>
+<h2 id="PrincipleObjects">Principle Objects</h2>
 <p>
-At the start the game, players will prompted to choose how many are playing(6 total). 
-Then Each player will be asked to write their first and last name. They will be placed
-into a player object array and passed to the Player order class. In the player order
-class they will be given a chance to spin. This spinner will give them a random 
-number.  The number will be placed into the correct player object. The player array will
-be placed in a sort method. The sort method will determine player order. After the order
-has been given they will be placed ito the PlayerOrder method. This method will keep
-them in order throughout the game. The player will be sent to the GameBoard. The gameboard will prompt
-the user to decide if they want to start a career or go to school. The
-GameBoard object will have a spin method, this will give them a random number. The
-Player object and the random number will be sent to the Gameboard method. The
-GameBoard method will then send them to a game space based on what number they were
-given.  The selected space will then Have a spinner class that will give them a option
-based on what they spin. They will then be returned back to the Gameboard. This will
-repeat until a certain amount of spaces have been acheived. Once the game is over
-the players will give their value <br/>
+The principle objects of this system will include a(n):<br>
+GAME class --<br>
+This must be a singleton object and should contain methods to select the player count (limit of 6 as shown in the official rulebook), AI count (part of player count), select player identifiers, and player genders.<br>
+Data members should include the essential elements of the game (i.e. money, stock, insurance, etc.) which will be passed to other objects for use when necessary.<br>
+The game class must have two list-like data members: one for players, and one for spaces.<br>
+This class must also have a spinner class.<br>
+PLAYER class --<br>
+This object should be created before the game starts with the relevant info that was given to the game class above.<br>
+It should also contain methods that dictate pre-movement (i.e. buy insurance, buy stock, take loans, repay loans, etc.) and preparing to move (i.e. player-spins).<br>
+Additional data members (to the ones passed by the game class) should include the players space-on-board, their career, house, insurances, stocks, LIFE tiles, and any outstanding loans.<br>
+SPACE class --<br>
+All spaces are associated with an event.<br>
+To indicate which of the many events belongs to this space, there will be an event identifier.<br>
+This could naturally be worked into a database design in the future.<br>
+This class will also require a space-is-occupied boolean to indicate to other players whether or not to pass this space.<br>
+Data structures that may also work well with this design are trees or hash maps.<br>
+EVENT class –-<br>
+This object is essential to the game.<br>
+An event may be of multiple types (i.e. career, LIFE, draw, optional, add-people, payday, and stop), and so must contain a list of any identifiers in order to perform operations correctly.<br>
+True to the original game, these events must be one of the four colors (i.e. orange, red, green, or blue), and have a description for clarity.<br>
+SPINNER class --<br>
+this is another singleton object that will be used in updating the players space on the board.<br>
+Its data members will include an array of integers to be randomly cycled through, and the “speeding” career-space event.<br>
+This class must include a player-spins method, and will take the player as a parameter and append their space-on-board number.<br>
+Once a player spins their turn continues automatically unless prompted for intervention.<br>
+LIFE TILE class --<br>
+it is necessary for this to be its own object because it has at least three identifiable members: a monetary value, a description, and a player-assigned optional field.<br>
+</p>
 
 <img src="Player.jpg" alt="Class Diagram" >
 <img src="Spin.jpg" alt="Class Diagram" >
 <img src="Untitled Diagram copy 2.jpg" alt="Class Diagram" >
 <img src="Untitled Diagram copy 3.jpg" alt="Class Diagram" >
 <img src="Untitled Diagram copy 4.jpg" alt="Class Diagram" >
-<img src="Untitled Diagram copy 5.jpg" alt="Class Diagram" ><br/>
-The class diagram is broken up into different segments. 
-Player Class: This is where all of the Player information will be held throughout the game
-Player Order: This is where the player will be given a number to keep track of their order. This is also where the player objects will be sorted.
-The will be placed into a order method that will keep track of the order through out the game.
-Board Game: This will have a spinner method and will place the players onto the correct space based on their spin
-Game spaces: Based on where they land they will be given options to choose from
-</p>
-<p>
-Squence diagram was placed here in segments to show the different options of the game<br/>
-
-<img src="Untitled Diagram copy 6.jpg" alt="Sequence Diagram" >
-<img src="Untitled Diagram copy 7.jpg" alt="Sequence Diagram" >
-<img src="Seq.jpg" alt="Sequence Diagram" >
-<img src="Untitled Diagram copy.jpg" alt="Sequence Diagram" >"
-
-</p>
+<img src="Untitled Diagram copy 5.jpg" alt="Class Diagram" >
