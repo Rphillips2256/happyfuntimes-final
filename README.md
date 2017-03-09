@@ -15,3 +15,10 @@ eye-catching graphic.
 
 Finally, consider defining some sprints and work items in Track & Plan to give 
 interested developers a sense of your cadence and upcoming enhancements.
+
+Ok this is Ryan here I have been getting BlueMix to work with Eclipse
+some notes on that is that you always have to merge into the project any
+changes that have occured. Meaning you cannot push any new changes without first
+merging someone elses changes. Without doing that it will fail every single time.
+If there are any questions please ask me, as far as extra plugins I will need everyone 
+to get with me and I will help you all get on there.
