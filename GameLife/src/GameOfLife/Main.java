@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-//change
+//change to this line
 public class Main extends Application {
 	
 	private Stage primaryStage;
