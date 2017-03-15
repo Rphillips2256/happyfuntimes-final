@@ -1,4 +1,20 @@
 <h2 id="TestStrategy">Test Strategy</h2>
 <p>
+1/. Unit testing for easy maintenance, better designs<br>
+Unit tests are fast, grandular, and whitebox tests. 
+They improve system design by incentivizing decoupling and simplicity. 
+Unit test help most in maintenance of rapidly evolving code bases, 
+where code contributions originate from different individuals at different subsystem.<br><br>
+
+2/. Functional testing for component level behavior correctness<br>
+Functional tests are mostly black box, and time consuming. 
+They are used to ensure overall correctness of behavior, to better understand end user requirement etc. 
+Because the functional tests are time consuming they are often triggered periodically, 
+unlike the unit test suite which runs after every code change.<br><br>
+
+3/. Integration testing for behavior correctness for the whole system<br>
+Integration testing is essential. Integrations tests can effectively help test drive the whole migration process. 
+In most cases, they’ll involve combining both operations and application code bases as a unified solution and testing the resultant system as a whole. 
+These are the most time consuming tests, and generally key performance indicators are codified and asserted via integration test suites.<br><br>
 
 </p>
