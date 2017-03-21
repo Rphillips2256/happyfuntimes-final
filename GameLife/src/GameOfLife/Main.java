@@ -12,12 +12,17 @@ public class Main extends Application {
 	
 	private Stage primaryStage;
 	private Pane mainLayout;
+	private Square currentSquare;
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Life");
 		showMainView();
+		
+	}
+	
+	private void showMenu(){
 		
 	}
 	
@@ -28,6 +33,11 @@ public class Main extends Application {
 		Scene scene = new Scene(mainLayout);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		update();
+		
+	}
+	
+	private void update(){
 		
 	}
 
