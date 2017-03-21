@@ -11,37 +11,67 @@ methods, classes, and interfaces<br>
 Unit tests are fast, grandular, and whitebox tests. 
 They improve system design by incentivizing decoupling and simplicity. 
 Unit test help most in maintenance of rapidly evolving code bases, 
+<<<<<<< HEAD
 where code contributions originate from different individuals at different subsystem.<br><br>
 </li>
 <li>Functional testing for component level behavior correctness<br>
+=======
+where code contributions originate from different individuals at different subsystem.<br>
+==>Unit test: check to see are all created classes working together and errors free and easy to read.
+Check to see fault-tolerant, if input from user because program terminate or the program still run on every step of the way till coding are complete. 
+
+<br><br>
+
+2. Functional testing for component level behavior correctness<br>
+>>>>>>> 8c4e09f49757879ee956d6fd553a0525d6d7e5f2
 Functional tests are mostly black box, and time consuming. 
 They are used to ensure overall correctness of behavior, to better understand end user requirement etc. 
 Because the functional tests are time consuming they are often triggered periodically, 
+<<<<<<< HEAD
 unlike the unit test suite which runs after every code change.<br><br>
 </li>
+=======
+unlike the unit test suite which runs after every code change.<br>
+==>Functional testing, we will check any behavior change or error from user input.
+<br><br>
+
+>>>>>>> 8c4e09f49757879ee956d6fd553a0525d6d7e5f2
 
 <li>Integration testing for behavior correctness for the whole system<br>
 Integration testing is essential. Integrations tests can effectively help test drive the whole migration process. 
 In most cases, they’ll involve combining both operations and application code bases as a unified solution and testing the resultant system as a whole. 
-These are the most time consuming tests, and generally key performance indicators are codified and asserted via integration test suites.<br><br>
+These are the most time consuming tests, and generally key performance indicators are codified and asserted via integration test suites.<br>
+==>Integration testing, after all code put together,<br>
+we will have different people from our team member run the program and give feedback what need to be done,<br>
+or have the user representative test the program. 
+<br><br>
+</p>
 
+<p>
 Extreme programming emphasizes testing all breakable pieces of code over testing every possible path, which is the classical approach.<br>
 But the classical method is rarely ever exhaustive anyways because of time and resources available.</li>
 </ul>
 <br> 
 </p>
+
 <p>
-Strategy
+<h2>Strategy</h2>
 <br><br>
 Phase I (Preparation):<br>
 The group will determine all possible paths—although not necessarily test them all—and all the breakable components and where they possibly overlap, testing each of the components.
 <br><br>
 Phase II (Unit Testing):<br>
-Unit testing each member of the group will be responsible for a unit(s) they have designed (see testing assignment) and will test them according to their own knowledge (whether by automated tests or by exhausted methods). Test methods, results, and/or crashes will be recorded in a standard documentation format. Inspections on units will be performed by at least one other member of the group.
+Unit testing each member of the group will be responsible for a unit(s) they have designed (see testing assignment) and<br>
+will test them according to their own knowledge (whether by automated tests or by exhausted methods).<br>
+Test methods, results, and/or crashes will be recorded in a standard documentation format.<br>
+Inspections on units will be performed by at least one other member of the group.
 <br><br>
 Phase III (Functional Testing for Components):<br>
-Component testing will be performed in a similar manner to the unit tests, but concerning the classes and their interfaces. Classes may be paired with test classes that utilize an interface(s).
+Component testing will be performed in a similar manner to the unit tests, but concerning the classes and their interfaces.<br>
+Classes may be paired with test classes that utilize an interface(s).
 <br><br>
 Phase IV (Integration testing for System):<br>
-The main program will be a GUI application and therefore be very expensive to test conventionally. Since performance of the system is not of relative importance, a manual inspection will be sufficient; with benchmarking if necessary.
-</p><br/>
+The main program will be a GUI application and therefore be very expensive to test conventionally.<br>
+Since performance of the system is not of relative importance, a manual inspection will be sufficient;<br>
+with benchmarking if necessary.
+</p><br><br>
