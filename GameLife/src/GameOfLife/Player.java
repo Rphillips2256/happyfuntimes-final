@@ -10,7 +10,7 @@ public class Player implements Serializable {
 	private int playerOrder;
 	private double salary;
 	private String career;
-	private Board board;
+	private Board board;//
 	private Square location; //
 	private Spin spin;
 	private Square newLoc;
