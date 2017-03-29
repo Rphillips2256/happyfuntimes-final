@@ -11,7 +11,7 @@ public class Player implements Serializable {
 	private double salary;
 	private String career;
 	private Board board;
-	private Square location;
+	private Square location; //
 	private Spin spin;
 	private Square newLoc;
 	
