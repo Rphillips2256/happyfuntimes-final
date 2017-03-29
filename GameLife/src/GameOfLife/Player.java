@@ -1,45 +1,43 @@
 package GameOfLife;
 
-//This is a change so ha, it is a comment
-//comment 2
+
 
 
 import java.io.Serializable;
 
 public class Player implements Serializable {
 	private String name;
-	private Piece piece;
+	private int playerOrder;
+	private double salary;
+	private String career;
 	private Board board;
+	private Square location;
+	private Spin spin;
+	private Square newLoc;
 	
-	public Player(String name,  Board board) {
+	public Player(String name, Board board, int position, int playerOrder, double salary, String career, Square location) {
 		this.name=name;
 		this.board=board;
-		piece = new Piece(board.getStartSquare());
+		this.playerOrder = playerOrder;
+		this.salary = salary;
+		this.career = career;
+		this.location = location;
 	}
-	
-	public Player(String name, Board board, int position) {
-		this.name=name;
-		this.board=board;
-		Square square = board.getStartSquare();
-		for(int i=0; i<=position; i++) {
-			square=square.getNextSquare();
-		}
-		piece = new Piece(square);
-	}
-	
-	public void takeTurn() {
-			//roll dice
-		
 
-		//Square newLoc = board.getSquare(piece.getLocation());//need spin number
-		//piece.setLocation(newLoc);
+	public void takeTurn() {
+		//spin
+	  spin.spinner();
+	 newLoc = board.getSquare(getLocation(), spin.spinner());
 	}
 	
 	public Square getLocation() {
-		return piece.getLocation();
+		return location;
 	}
 	
 	public String getName() {
 		return name;
+	}
+	public Square setLocation() {
+		return newLoc;
 	}
 }
