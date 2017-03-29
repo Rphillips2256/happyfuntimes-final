@@ -39,5 +39,5 @@ public class Player implements Serializable {
 	}
 	public Square setLocation() {
 		return newLoc;
-	}
+	}//
 }
