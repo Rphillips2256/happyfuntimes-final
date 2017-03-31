@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import logic.Square;
 //change to this line
 //lets change this line
 public class Main extends Application {
@@ -18,12 +19,27 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Life");
+		showStart();
 		showMainView();
 		
 	}
 	
 	private void showMenu(){
 		
+	}
+	
+	private void showStart(){
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(sun.applet.Main.class.getResource("view/StartScreen.fxml"));
+		try {
+			mainLayout = loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Scene scene = new Scene(mainLayout);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
 	
 	private void showMainView() throws IOException{
