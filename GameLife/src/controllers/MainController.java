@@ -3,12 +3,12 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
+import logic.SquareFactory;
 
 public class MainController {
 	
 	@FXML 
-	private GridPane grid;
+	private GridPane mainBoard;
 	@FXML
 	private Label redArea;
 	private Label yellowArea;
@@ -16,22 +16,29 @@ public class MainController {
 	private Label whiteArea;
 	private Label orangeArea;
 	private Label blueArea;
-	@FXML
-	private Pane pane;
+	
+	private SquareFactory factory;
 	
 	
 	public MainController(){
-		generateGridArea();
+		int counter = 0;
+		while(counter < 100){
+			factory.createSquare(counter);
+			counter++;
+			if(counter == 99){
+				break;
+			}
+		}
 	}
 	
 	public GridPane getGrid() {
-		return grid;
+		return mainBoard;
 	}
 
 
 
 	public void setGrid(GridPane grid) {
-		this.grid = grid;
+		this.mainBoard = grid;
 	}
 
 
@@ -105,21 +112,7 @@ public class MainController {
 	public void setBlueArea(Label blueArea) {
 		this.blueArea = blueArea;
 	}
-
-
-
-	public Pane getPane() {
-		return pane;
-	}	
 	
-	protected void generateGridArea(){
-		for(int i = 0; i < 10; i++){
-			for(int j = 0; j < 10; j++){
-				grid.add(pane, i, j);
-			}
-			
-			grid.getChildren().get(0).setStyle("-fx-background-color:green");
-		}
-	}
+	
 	
 }
