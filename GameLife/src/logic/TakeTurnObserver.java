@@ -1,4 +1,4 @@
-package GameOfLife;
+package logic;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,6 +7,8 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.JOptionPane;
+
+import GameOfLife.LifeGame;
 
 public class TakeTurnObserver implements Observer{
 	private Observable publisher;

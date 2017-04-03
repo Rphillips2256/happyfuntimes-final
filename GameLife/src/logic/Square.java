@@ -1,4 +1,4 @@
-package GameOfLife;
+package logic;
 
 
 import java.io.Serializable;

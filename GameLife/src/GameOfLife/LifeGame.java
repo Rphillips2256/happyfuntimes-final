@@ -5,6 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 
+import logic.Board;
+import logic.Player;
+import logic.TurnInfo;
+
 public class LifeGame extends Observable implements Serializable{
 
 	private static final int ROUNDS_TOTAL=20;
