@@ -2,7 +2,7 @@ package GameOfLife;
 
 import java.io.Serializable;
 public class SquareFactory implements Serializable{
-	
+//	
 	private SquareType green;
 	private SquareType blue;
 	private SquareType orange;

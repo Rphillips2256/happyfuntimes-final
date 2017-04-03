@@ -1,5 +1,5 @@
 package GameOfLife;
-
+//
 public class Spinner {
 	
 	public int spin;
