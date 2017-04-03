@@ -1,6 +1,8 @@
 package GameOfLife;
 
 import java.io.IOException;
+
+import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,17 +11,20 @@ import javafx.stage.Stage;
 import logic.Square;
 //change to this line
 //lets change this line
+
 public class Main extends Application {
 	
 	private Stage primaryStage;
 	private Pane mainLayout;
+	private MainController mainView;
 	private Square currentSquare;
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Life");
-		showStart();
+		mainView = new MainController();
+		//showStart();
 		showMainView();
 		
 	}

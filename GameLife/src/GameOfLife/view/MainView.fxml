@@ -35,11 +35,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <Label fx:id="player1Area" alignment="CENTER" layoutX="656.0" prefHeight="169.0" prefWidth="347.0" style="-fx-background-color: red;" text="Player Area" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="player2Area" alignment="CENTER" layoutX="656.0" layoutY="170.0" prefHeight="169.0" prefWidth="347.0" style="-fx-background-color: blue;" text="Player area" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="plyaer3Area" alignment="CENTER" layoutX="656.0" layoutY="340.0" prefHeight="160.0" prefWidth="347.0" style="-fx-background-color: yellow;" text="Player Area" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="player4Area" alignment="CENTER" layoutY="506.0" prefHeight="169.0" prefWidth="320.0" style="-fx-background-color: white;" text="Player Area" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="player5Area" alignment="CENTER" layoutX="325.0" layoutY="506.0" prefHeight="169.0" prefWidth="320.0" style="-fx-background-color: green;" text="Player Area" textAlignment="CENTER" wrapText="true" />
-      <Label fx:id="player6Area" alignment="CENTER" layoutX="650.0" layoutY="506.0" prefHeight="169.0" prefWidth="349.0" style="-fx-background-color: orange;" text="Player Area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="redArea" alignment="CENTER" layoutX="656.0" prefHeight="169.0" prefWidth="347.0" style="-fx-background-color: red;" text="Player Area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="blueArea" alignment="CENTER" layoutX="656.0" layoutY="170.0" prefHeight="169.0" prefWidth="347.0" style="-fx-background-color: blue;" text="Player area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="yellowArea" alignment="CENTER" layoutX="656.0" layoutY="340.0" prefHeight="160.0" prefWidth="347.0" style="-fx-background-color: yellow;" text="Player Area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="whiteArea" alignment="CENTER" layoutY="506.0" prefHeight="169.0" prefWidth="320.0" style="-fx-background-color: white;" text="Player Area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="greenArea" alignment="CENTER" layoutX="325.0" layoutY="506.0" prefHeight="169.0" prefWidth="320.0" style="-fx-background-color: green;" text="Player Area" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="orangeArea" alignment="CENTER" layoutX="650.0" layoutY="506.0" prefHeight="169.0" prefWidth="349.0" style="-fx-background-color: orange;" text="Player Area" textAlignment="CENTER" wrapText="true" />
    </children>
 </Pane>
