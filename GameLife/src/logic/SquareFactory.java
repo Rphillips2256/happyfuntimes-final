@@ -8,6 +8,7 @@ public class SquareFactory implements Serializable{
 	private SquareType green;
 	private SquareType blue;
 	private SquareType orange;
+	private SquareType red;
 	private MainController mainView;
 	
    public Square createSquare(int index){	
@@ -37,7 +38,12 @@ public class SquareFactory implements Serializable{
     	  mainView.getGrid().getChildren().get(index).setStyle("-fx-background-color:#1e90ff");
          return blue.create(index);
          
-      } 
+      } else if(index == 1 
+     		 || index == 10
+     		 || index == 15) {
+     	  return red.create(index);
+       }
+       
       
       else{
     	  mainView.getGrid().getChildren().get(index).setStyle("-fx-background-color:#ffa500");
