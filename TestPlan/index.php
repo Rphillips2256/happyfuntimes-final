@@ -6,7 +6,16 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Test Plan for Team Project</h1>
+<h1>Test Plan for HappyFunTime Team Project</h1>
+
+<ul>Group memberr are:
+<li>Fordahl, Zachary K </li>
+<li>Haeflinger, Alexxandrya M </li>
+<li>Phillips, Ryan L </li>
+<li>Pho, Sophorn M </li>
+<li>Vaughn, Alec J </li>
+</ul>
+
 <hr>
 <h2>Table of Contents</h2>
 <ul>
