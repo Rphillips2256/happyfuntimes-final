@@ -6,10 +6,10 @@ public class SquareFactory implements Serializable{
 	private SquareType green;
 	private SquareType blue;
 	private SquareType orange;
+	private SquareType red;
 	
    public Square createSquare(int index){	
-      if(  index == 1 
-    	|| index == 4  
+      if(  index == 4  
     	|| index == 12 
     	|| index == 21 
     	|| index == 26 
@@ -32,7 +32,12 @@ public class SquareFactory implements Serializable{
     		  || index == 80 ){
          return blue.create(index);
          
-      } 
+      } else if(index == 1 
+    		 || index == 10
+    		 || index == 15) {
+    	  return red.create(index);
+      }
+      
       
       else{
           return orange.create(index);
