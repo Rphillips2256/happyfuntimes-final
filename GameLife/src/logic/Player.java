@@ -43,7 +43,7 @@ public class Player implements Serializable {
 	public void takeTurn() {
 		//spin//
 	  spin.spinner();
-	 newLoc = board.getSquare(getLocation(), spin.spinner());
+	 //newLoc = board.getSquare(getLocation(), spin.spinner());
 	}
 	
 	public Square getLocation() {
