@@ -6,8 +6,13 @@ import controllers.GridControl;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import logic.Square;
@@ -49,12 +54,47 @@ public class Main extends Application {
 	}
 	
 	private void showMainView() throws IOException{
-		BorderPane pane = new BorderPane();
-		GridControl board = new GridControl();
-		pane.setPrefHeight(900);
-		pane.setPrefWidth(1200);
-		pane.setCenter(board.makeBoard());
+		//Map map = new Map(); not used here
+		GridPane pane = new GridPane();
 		
+		GridControl board = new GridControl();
+		
+		Button spin = new Button("spin");
+		
+		Label spinLabel = new Label();
+		
+		Label player1 = new Label();
+		Label player2 = new Label();
+		Label player3 = new Label();
+		Label player4 = new Label();
+		
+		spinLabel.setPrefSize(100, 100);
+		spinLabel.setStyle("-fx-background-color: darkgrey");
+		
+		player1.setPrefSize(75, 75);
+		player1.setStyle("-fx-background-color: red");
+		
+		player2.setPrefSize(75, 75);
+		player2.setStyle("-fx-background-color: blue");
+		
+		player3.setPrefSize(75, 75);
+		player3.setStyle("-fx-background-color: yellow");
+		
+		player4.setPrefSize(75, 75);
+		player4.setStyle("-fx-background-color: purple");
+		
+		pane.setPrefSize(800, 760);
+		
+		
+		pane.add(board.makeBoard(), 1, 1, 3, 3 );
+		pane.add(spin, 0, 0);
+		pane.add(spinLabel, 1, 0);
+		pane.add(player1, 0, 1);
+		pane.add(player3, 0, 2);
+		pane.add(player2, 4, 1);
+		pane.add(player4, 4, 2);
+		
+		pane.setGridLinesVisible(true);
 		
 		
 		Scene s = new Scene(pane);

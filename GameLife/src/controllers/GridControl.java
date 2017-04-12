@@ -1,10 +1,14 @@
 package controllers;
 
-import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Region;
 
-public class GridControl extends Region {
+public class GridControl {
 	
 	public GridControl(){
 		
@@ -12,29 +16,36 @@ public class GridControl extends Region {
 	
 	public GridPane makeBoard(){
 		GridPane board = new GridPane();
-		
-        for(int col =0; col < 10; col++){
-            for(int row=0;row<10; row++){
-                
-                if(row==1||row==3||row==5){
-                 MakeBoardSquare square1 = new MakeBoardSquare(row);
-                 board.add(square1, row, col);
-                }
-                else if(row==4||row ==6){
-                	MakeBoardSquare square2 = new MakeBoardSquare(row);
-                	board.add(square2, row, col);
-                }
-                else if(row ==7){
-                	 MakeBoardSquare square3 = new MakeBoardSquare(row);
-                	 board.add(square3, row, col);
-                }
-                else{
-                	MakeBoardSquare square4 = new MakeBoardSquare(row);
-                	board.add(square4, row, col);
-                }
+		Map map = new Map();
+        for(int col = 0; col < map.mapGrid().length; col++){
+            for(int row = 0; row < map.mapGrid()[col].length; row++){
+             
+            	if(map.mapGrid()[col][row] == 1){
+            		MakeBoardSquare orange = new MakeBoardSquare(1);
+            		board.add(orange, col, row);
+            	} else if(map.mapGrid()[col][row] == 2){
+            		MakeBoardSquare blue = new MakeBoardSquare(2);
+            		board.add(blue, col, row);
+            	} else if(map.mapGrid()[col][row] == 3){
+            		MakeBoardSquare green = new MakeBoardSquare(3);
+            		board.add(green, col, row);
+            	}else if(map.mapGrid()[col][row] == 4){
+            		MakeBoardSquare red = new MakeBoardSquare(4);
+            		board.add(red, col, row);
+            	}else{
+            		MakeBoardSquare grey = new MakeBoardSquare(0);
+            		board.add(grey, col, row);
+            	}
+            	
             }
                 
         }
+        //Image image = new Image("/Users/rs5634nr/git/happyfuntime-cs410-winona/GameLife/res/GameOfLife.jpeg");
+       // board.setBackground(new Background(new BackgroundImage(image, 
+        //		BackgroundRepeat.REPEAT, 
+        //		BackgroundRepeat.REPEAT, 
+        //		BackgroundPosition.DEFAULT, 
+        //		BackgroundSize.DEFAULT)));
         
         board.setPrefHeight(500);
         board.setPrefWidth(500);
