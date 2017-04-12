@@ -1,4 +1,5 @@
 package GameOfLife;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,28 +7,41 @@ import java.util.List;
 import java.util.Observable;
 
 import logic.Board;
+import logic.Spin;
 import logic.Player;
+import logic.Career;
+import logic.Salary;
 import logic.TurnInfo;
-
-public class LifeGame extends Observable implements Serializable{
+public class LifeGame extends Observable{
 
 	private static final int ROUNDS_TOTAL=20;
 	private static final int PLAYERS_TOTAL=2;
 	private List players = new ArrayList(PLAYERS_TOTAL);
-	private Board board = Board.getInstance();
-	
+	Board board;
+	Spin spinner = new Spin();   
 	private int round =0;
 	private boolean gameFlag = true;
-
-
+	
+	
 
 	public LifeGame() {
-	
+		players.clear();
+		Player p;
+		p=new Player("Player1",board, spinner);
+		players.add(p);
+		p=new Player("Player2",board,spinner);
+		players.add(p);
 	}
+
 
 	public LifeGame(TurnInfo info) {
 		players.clear();
-	
+		round = info.getRoundNumber();
+		Player p;
+		p=new Player("Player1",board,spinner,info.getPlayer1Position());
+		players.add(p);
+		p=new Player("Player2",board,spinner,info.getPlayer2Position());
+		players.add(p);
 	}
 
 	public void playGame() {
@@ -62,5 +76,8 @@ public class LifeGame extends Observable implements Serializable{
 		return round;
 	}
 	
-
+	public Spin getVaule() {
+		return spinner;
+	}
+	
 }

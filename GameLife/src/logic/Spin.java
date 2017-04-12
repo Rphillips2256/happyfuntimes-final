@@ -28,5 +28,7 @@ public class Spin extends Observable implements Serializable {
     
     	return value;
      }
-    
+    public int getValue() {
+		return value;
+	}
 }

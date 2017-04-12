@@ -1,5 +1,5 @@
 package GameOfLife;
-
+/*
 import java.io.IOException;
 
 import controllers.MainController;
@@ -66,3 +66,4 @@ public class Main extends Application {
 		launch(args);
 	}
 }
+*/

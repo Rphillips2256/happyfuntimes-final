@@ -1,5 +1,4 @@
 package logic;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -7,18 +6,17 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.JOptionPane;
-
 import GameOfLife.LifeGame;
 
 public class TakeTurnObserver implements Observer{
 	private Observable publisher;
 	private LifeGame game;
 	
-	TakeTurnObserver() {
+	public TakeTurnObserver() {
 		
 	}
 	
-	TakeTurnObserver(Observable publisher) {
+	public TakeTurnObserver(Observable publisher) {
 		this.publisher=publisher;
 		publisher.addObserver(this);
 	}

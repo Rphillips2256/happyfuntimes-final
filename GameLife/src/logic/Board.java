@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board implements Serializable{
-	private static final int SIZE = 100;
+	private static final int SIZE = 50;
 	private List squares = new ArrayList(SIZE);
 	private SquareFactory sqFactory = new SquareFactory();
 	private static Board instance;
+	
 	
         
         private Board() {
@@ -38,7 +39,7 @@ public class Board implements Serializable{
 	}
 	
 	private void build(int i) {
-		Square s = (Square) sqFactory.createSquare(i);
+		Square s = (Square) sqFactory.create(i);
 		squares.add(s);
 	}
 	
