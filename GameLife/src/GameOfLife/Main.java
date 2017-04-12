@@ -2,10 +2,12 @@ package GameOfLife;
 
 import java.io.IOException;
 
+import controllers.GridControl;
 import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import logic.Square;
@@ -47,20 +49,20 @@ public class Main extends Application {
 	}
 	
 	private void showMainView() throws IOException{
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("view/MainView.fxml"));
-		mainLayout = loader.load();
+		BorderPane pane = new BorderPane();
+		GridControl board = new GridControl();
+		pane.setPrefHeight(900);
+		pane.setPrefWidth(1200);
+		pane.setCenter(board.makeBoard());
 		
-		Scene scene = new Scene(mainLayout);
-		primaryStage.setScene(scene);
+		
+		
+		Scene s = new Scene(pane);
+		primaryStage.setScene(s);
 		primaryStage.show();
-		update();
 		
 	}
 	
-	private void update(){
-		
-	}
 
 	public static void main(String[] args) {
 		launch(args);
