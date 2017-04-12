@@ -17,14 +17,10 @@ import java.io.Serializable;
 public class Spin extends Observable implements Serializable {
    
 	public static final int MAX = 10;
-	private int value;
-	public Spin(){
-		spinner();
-	}
+	private static int value;
     
-     public int spinner(){
-       
-    	value = (int) ((Math.random()*MAX)+1);
+     public static int spinner(){
+      value = (int) ((Math.random()*MAX)+1);
     
     	return value;
      }

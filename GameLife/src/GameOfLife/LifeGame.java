@@ -21,12 +21,13 @@ public class LifeGame extends Observable{
 	Spin spinner = new Spin();   
 	private int round =0;
 	private boolean gameFlag = true;
-	
-	
+	Career career;
+	Player p;
+	Salary salary;
 
 	public LifeGame() {
 		players.clear();
-		Player p;
+		
 		p=new Player("Player1",board, spinner);
 		players.add(p);
 		p=new Player("Player2",board,spinner);
@@ -45,7 +46,22 @@ public class LifeGame extends Observable{
 	}
 
 	public void playGame() {
+		//spinner = new Spin();
+		
+		for(int i = 0; i<players.size();i++){
+			spinner = new Spin();
+			p = (Player) players.get(i);
+			spinner = new Spin();
+			career.Spin(p);
+			spinner = new Spin();
+			salary.returnSalary(p);
+			
+			
+		}
 		for(;round<ROUNDS_TOTAL; round++) {
+			if(round ==1){
+				p.setLocation(board.getStartSquare()); 
+			}
 			playRound();
 			setChanged();
 			notifyObservers(this);

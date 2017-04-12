@@ -8,7 +8,7 @@ public class Board implements Serializable{
 	private List squares = new ArrayList(SIZE);
 	private SquareFactory sqFactory = new SquareFactory();
 	private static Board instance;
-	
+	private Spin spinner = new Spin();
 	
         
         private Board() {
@@ -24,7 +24,7 @@ public class Board implements Serializable{
         }
 	
 	public Square getSquare(Square start, int distance) {
-		int endIndex = (start.getIndex() + distance) % SIZE;
+		int endIndex = (start.getIndex() + distance);
 		return (Square) squares.get(endIndex);
 	}
 	

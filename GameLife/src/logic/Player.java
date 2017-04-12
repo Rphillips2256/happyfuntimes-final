@@ -11,10 +11,11 @@ public class Player implements Serializable {
 	private double salary;
 	private String career;
 	private Board board;//
-	private Square location; //
+	private Square location = null; //
 	private Spin spin;
-	private Square newLoc;
+	//private Square newLoc;
 	private double income;
+	private int rollTotal = 5;
 	
 	public Player(String name, Board board, Spin spin){
 		this.name = name;
@@ -42,8 +43,11 @@ public class Player implements Serializable {
 */
 	public void takeTurn() {
 		//spin//
-	  spin.spinner();
-	 //newLoc = board.getSquare(getLocation(), spin.spinner());
+		//int rollTotal = 5;
+		//rollTotal = spin.spinner();
+	
+		Square newLoc = board.getSquare(getLocation(), rollTotal);
+		location = newLoc;
 	}
 	
 	public Square getLocation() {
@@ -53,8 +57,8 @@ public class Player implements Serializable {
 	public String getName() {
 		return name;
 	}
-	public Square setLocation() {
-		return newLoc;
+	public Square setLocation(Square square) {
+		return location;
 	}//
 	public void setSalary(double salary) {
 		this.salary = salary;

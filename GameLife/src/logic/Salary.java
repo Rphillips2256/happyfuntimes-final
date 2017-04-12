@@ -3,9 +3,10 @@ package logic;
 public class Salary {
     
     
-    Spin spinner = new Spin();   
-public void returnSalary(Player input){
-       int answer = spinner.spinner();
+   static Spin spinner = new Spin();  
+   static int answer = spinner.spinner();
+public static void returnSalary(Player input){
+      
       
       
       if ( answer ==1){

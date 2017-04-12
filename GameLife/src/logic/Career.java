@@ -14,8 +14,8 @@ import java.util.Random;
  */
 public class Career {
 
-  Spin spinner = new Spin();
-    
+  static Spin spinner = new Spin();
+  static int answer = spinner.spinner();
       
   /* if the opponent owns the matching career card pay the opponent the amount on
     the space.
@@ -24,12 +24,12 @@ public class Career {
     for example if you land on the ski accident space you have to pay the doctor 
     the amount on the card*/
     
-    public void Spin(Player input){
+    public static void Spin(Player input){
         
         /*pass the player object so you can set what career*/
            
        
-         int answer =spinner.spinner();
+
           
           System.out.print("You rolled:\t["+answer+"]");
           
