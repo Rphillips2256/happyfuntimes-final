@@ -1,6 +1,5 @@
 package logic;
 
-
 import java.io.Serializable;
 
 public class Square implements Serializable{
