@@ -1,6 +1,6 @@
 package cards;
 
-public class Career {
+public enum Career {
 	
 	private String name;
 	
