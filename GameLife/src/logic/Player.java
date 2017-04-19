@@ -32,6 +32,10 @@ public class Player implements Serializable {
 		}
 		location = square;
 	}
+	
+	public Player(String name){
+		this.name = name;
+	}
 	/*
 	public Player(String name, Board board,int position, double salary, String career, Square location) {
 		this.name=name;
